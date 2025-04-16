@@ -1,0 +1,21 @@
+<h2>Máquina {{ machine.capitalize() }}</h2>
+<p>Saldo: R$ {{ balance }}</p>
+
+<form method="post">
+    <button type="submit">Jogar (R$ {{ config.cost }})</button>
+</form>
+
+{% if result %}
+    <h3>Resultado: {{ result[0] }} {{ result[1] }} {{ result[2] }}</h3>
+    <p>{{ message }}</p>
+{% endif %}
+
+<hr>
+<h3>Escolher outra máquina:</h3>
+<ul>
+    <li><a href="/slot/classica">🎰 Clássica (R$10)</a></li>
+    <li><a href="/slot/media">💎 Média (R$25)</a></li>
+    <li><a href="/slot/vip">👑 VIP (R$50)</a></li>
+</ul>
+
+<a href="/logout">Sair</a>
